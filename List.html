@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mussger Einkaufsliste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+        <form id="myform">
+          <div class="inputs">
+          <input id="Item" placeholder="Item"></input><br>
+          <input list="ShopsList" placeholder="Shop" id="Shops"></input>
+            <datalist id="ShopsList">
+              <option value="Lidl">
+              <option value="Rewe">
+              <option value="Rossmann">
+              <option value="Diska">
+              <option value="Apotheke">
+              <option value="Asia-Shop">
+            </datalist>
+
+            <input type="checkbox" id="Critical">critical</input>
+          </div>
+            <a id="addItem">add Item</a>
+        </form>
+        
+        
+        <div id="List">
+
+        </div>
+        
+
+        
+
+  <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  <script src="main.js" type="module"></script>
+    
+</body>
+</html>

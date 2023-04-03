@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+
+body {
+    padding: 0;
+    margin:0;
+    font-family: 'Hammersmith One', sans-serif;
+    width: 100vw;
+}
+
+.greeting {
+    background-color: #eee;
+    position: sticky;
+    top:0px;
+    background-image: var(--bg-image);
+    width: 100vw;
+    
+    margin:0;
+   
+    
+}
+
+.greeting:after {  
+    content:"";
+    
+    background-image: var(--test);
+    background-size: contain;
+    position: absolute;
+    height:100%;
+    border-radius:50%;
+    aspect-ratio: 1/1;
+  
+}
+
+form {
+    padding-top: 1em;
+    z-index: 99;
+    position:sticky;
+    top:0;
+    display: grid;
+
+    
+    width:100%;;
+
+    background-color: whitesmoke;
+}
+
+.inputs {
+
+    display: flex;
+    padding: 1ch;
+    justify-content: space-between
+}
+
+input {
+
+    border-radius: 4px;
+    border: none;
+
+    
+}
+
+#Shops{
+    width: 20%;
+    accent-color: red;
+}
+
+#critical {
+    width:10%;
+}
+#Item {
+    width:50%;
+}
+
+#addItem {
+    padding:1em;
+    background-color: pink;
+    color: azure;
+    text-shadow: 1px 1px 3px gray;
+    font-size: larger;
+    border:none;
+    cursor: pointer;
+    width:90%;
+
+    box-shadow: inset 2px 2px 3px beige,inset -2px -2px 3px red;
+    text-align: center;
+    border-radius: 10px;
+
+
+}
+
+#addItem:focus, #addItem:hover {
+    box-shadow: inset 2px 2px 3px beige,inset -2px -2px 3px red, 2px 2px 4px gray;
+}
+
+
+#additem:active {
+    background-color: #3e8e41;
+    
+    transform: translateY(4px);
+  }
+
+
+  #List {
+    overflow-y: scroll;
+  }
+
+.list-item {
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+    max-width:300px;
+    width:80vw;
+    height:50px;
+    padding:1em;
+    position:relative;
+    margin:1em;
+    transition: all 350ms;
+}
+
+.list-item>button {
+    position: absolute;
+    background-color: transparent;
+    top:0;
+    right:10px;
+    height:100%;
+    width: 20%;
+    color: red;
+    font-size: larger;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+.list-item>button::after, .list-item>button::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width:25px;
+    background-color: gray;
+    border-radius: 5px;
+    top:50%;
+    left:50%;
+    transform: translatex(-50%) rotateZ(45deg);
+}
+
+.list-item>button::before {
+    transform: translatex(-50%) rotateZ(-45deg);
+}
+
+
+
+.list-item>button:hover, .list-item>button:focus {
+    background-color: pink;
+}
+
+:is(.list-item:hover, .list-item:focus) {
+    transform: scale(1.03);
+}
+
+:is(.list-item:hover, .list-item:focus) button:after, :is(.list-item:hover, .list-item:focus) button:before {
+    background-color: red;
+}
+
+.list-item :is(span,h2) {
+    position: absolute;
+
+}
+
+.list-item>.shop {
+    left:10%;
+    top:65%;
+    font-size: 12px;
+    width: 30%;
+    border:1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.Lidl {
+    background-color:lightblue;
+    color:darkblue;
+}
+
+.list-item>h2 {
+    top:0;
+}
+
+.list-item>.date {
+    left:50%;
+    top: 65%;
+    font-size: 12px;
+}
+
+
+.list-item.critical:after {
+    content:"!";
+    position: absolute;
+    top:50%;
+    right:-10%;
+   
+    color: red;
+    font-size: 25px;
+    font-weight: 900;
+    background: none;
+    border: none;
+}
+
+.list-item.critical {
+    background-image: linear-gradient(to right,transparent 95%,red );
+}
+#loginAnon {
+    visibility: hidden;
+}
